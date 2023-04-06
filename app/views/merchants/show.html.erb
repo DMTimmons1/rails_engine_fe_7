@@ -1,0 +1,11 @@
+<h1> <%=@merchant.name%>'s Dashboard </h1>
+
+<h3> <%=@merchant.name%>'s Items: </h3>
+
+<ol>
+  <% @merchant_items.each do |item| %>
+    <p>
+      <li><%= link_to item.name, item_path(item.id) %>
+    </p>
+  <% end %>
+</ol>
